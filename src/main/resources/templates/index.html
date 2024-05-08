@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Spring Boot With Fileinput - Sadot Hernández</title>
+
+    <!-- Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Sadot Hernández">
+    <meta name="theme-color" content="#ffffff">
+
+	<!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+	<!-- default icons used in the plugin are from Bootstrap 5.x icon library (which can be enabled by loading CSS below) -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css">
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- FileInput CSS -->
+    <link th:href="@{/plugins/fileinput/css/fileinput.css}" media="all" rel="stylesheet" type="text/css">
+    <link th:href="@{/plugins/fileinput/themes/bs5/theme.js}" media="all" rel="stylesheet"  type="text/css"/>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="form-row pt-2">
+                    <div class="form-group col-12">
+                    
+                        <div class="file-loading">
+                            
+                            <input id="file-0a" class="file" name="file" type="file" multiple="true" data-min-file-count="0" data-theme="fas">
+                        
+                        </div>
+                        
+                        <div id="kv-error-1" style="margin-top:10px;display:none"></div>
+                        
+                        <div id="kv-success-1" class="alert alert-success" style="margin-top:10px;display:none;"></div>
+                        
+                        <br>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+    <!-- FileInput -->
+    <script th:src="@{/plugins/fileinput/js/plugins/piexif.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/plugins/sortable.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/fileinput.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/locales/es.js}"></script>
+    <script th:src="@{/plugins/fileinput/themes/fas/theme.js}"></script>
+    <script th:src="@{/plugins/fileinput/js/configuracion.js}"></script>
+    
+</body>
+
+</html>

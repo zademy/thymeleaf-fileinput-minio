@@ -1,0 +1,28 @@
+server:
+   port: 8080
+   http2:
+      enabled: true
+   servlet:
+      context-path: /thymeleaf-fileinput
+      encoding:
+         charset: UTF-8
+   tomcat:
+      uri-encoding: UTF-8
+   compression:
+      enabled: true
+      mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css,image/jpeg,image/jpg,image/png
+      min-response-size: 4024
+
+spring:
+  application:
+    name: thymeleaf.fileinput
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  thymeleaf:
+      cache: false
+      encoding: UTF-8
+minio:
+  endpoint: host
+  accessKey: 2m6Evzz
+  secretKey: mYxKW9
