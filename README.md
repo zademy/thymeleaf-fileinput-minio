@@ -1,5 +1,5 @@
 ## Pre-requisitos
-- Spring Boot 3.25
+- Spring Boot 3.2.5
 - Thymeleaf 
 - Tomcat embed 10
 - Meven
