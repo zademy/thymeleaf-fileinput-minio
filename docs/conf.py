@@ -59,11 +59,11 @@ templates_path = ['_templates']
 # Configuración para mostrar versiones en la barra lateral
 html_sidebars = {
     '**': [
-        'sidebar.html',
-        'localtoc.html',
+        'about.html',
+        'navigation.html',
         'relations.html',
-        'sourcelink.html',
         'searchbox.html',
+        'donate.html',
     ]
 }
 
