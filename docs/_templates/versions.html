@@ -1,0 +1,30 @@
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Versiones</span>
+    v: {{ current_version }}
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Versiones</dt>
+      {% for slug, url in versions %}
+        <dd><a href="{{ url }}">{{ slug }}</a></dd>
+      {% endfor %}
+    </dl>
+    <dl>
+      <dt>Descargas</dt>
+      {% for type, url in downloads %}
+        <dd><a href="{{ url }}">{{ type }}</a></dd>
+      {% endfor %}
+    </dl>
+    <dl>
+      <dt>En GitHub</dt>
+      <dd>
+        <a href="https://github.com/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}">Ver</a>
+      </dd>
+      <dd>
+        <a href="https://github.com/{{ github_user }}/{{ github_repo }}/edit/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}">Editar</a>
+      </dd>
+    </dl>
+  </div>
+</div>

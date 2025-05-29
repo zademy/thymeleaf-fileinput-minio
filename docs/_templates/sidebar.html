@@ -1,0 +1,14 @@
+{% extends "!sidebar.html" %}
+
+{% block sidebartitle %}
+{{ super() }}
+<div class="version-selector">
+  <h3>Versiones</h3>
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Seleccionar versión</option>
+    {% for slug, url in versions %}
+      <option value="{{ url }}" {% if slug == current_version %}selected="selected"{% endif %}>{{ slug }}</option>
+    {% endfor %}
+  </select>
+</div>
+{% endblock %}
