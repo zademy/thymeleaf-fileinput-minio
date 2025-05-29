@@ -17,13 +17,6 @@ import sys
 # Add project root to Python path
 sys.path.insert(0, os.path.abspath('..'))
 
-# Try to import sphinx_rtd_theme, but don't fail if it's not available
-try:
-    import sphinx_rtd_theme
-    has_rtd_theme = True
-except ImportError:
-    has_rtd_theme = False
-
 # -- Project information -----------------------------------------------------
 
 
@@ -43,10 +36,13 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'sphinx_rtd_theme',
     'sphinx.ext.githubpages',
     'myst_parser',
 ]
+
+# If you want to use the Read the Docs theme, uncomment these lines:
+# html_theme = 'sphinx_rtd_theme'
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -71,14 +67,21 @@ todo_include_todos = False
 
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-if has_rtd_theme:
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-else:
-    html_theme = 'alabaster'  # Tema por defecto si sphinx_rtd_theme no está disponible
+# The theme to use for HTML and HTML Help pages.
+# Use the default theme for simplicity
+html_theme = 'alabaster'
+
+# Theme options are theme-specific and customize the look and feel of a theme
+html_theme_options = {
+    'description': 'Documentación de Thymeleaf FileInput con MinIO',
+    'github_user': 'zademy',
+    'github_repo': 'thymeleaf-fileinput-minio',
+    'github_button': True,
+    'github_banner': True,
+    'show_powered_by': True,
+    'page_width': '1200px',
+    'sidebar_width': '300px',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
