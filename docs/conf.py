@@ -71,17 +71,26 @@ todo_include_todos = False
 # Use the default theme for simplicity
 html_theme = 'alabaster'
 
-# Theme options are theme-specific and customize the look and feel of a theme
-html_theme_options = {
-    'description': 'Documentación de Thymeleaf FileInput con MinIO',
-    'github_user': 'zademy',
-    'github_repo': 'thymeleaf-fileinput-minio',
-    'github_button': True,
-    'github_banner': True,
-    'show_powered_by': True,
-    'page_width': '1200px',
-    'sidebar_width': '300px',
-}
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ['_static']
+
+# Custom sidebar templates, must be a dictionary that maps document names
+# to template names.
+#
+# The default sidebars (for documents that don't match any pattern) are
+# defined by theme itself.  Builtin themes are using these templates by
+# default: ['localtoc.html', 'relations.html', 'sourcelink.html',
+# 'searchbox.html']
+#
+# html_sidebars = {}
+
+# -- Options for HTMLHelp output ------------------------------------------
+
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'ThymeleafFileInputMiniodoc'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
