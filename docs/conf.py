@@ -30,10 +30,13 @@ language = 'es'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+html_static_path = []
+html_css_files = []
+html_js_files = []
 
-# Solo incluir el archivo JavaScript necesario para corregir SphinxRtdTheme
-html_js_files = ['js/sphinx_rtd_theme_fix.js']
+html_theme_options = {}
+html_show_sourcelink = False
+html_show_sphinx = False
 
 # -- Options for autodoc -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
@@ -50,8 +53,6 @@ autodoc_mock_imports = [
 
 # -- Options for ReadTheDocs -------------------------------------------------
 # https://docs.readthedocs.io/en/stable/config-file/v2.html
-
-# If true, links to the reST sources are added to the pages.
 html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer.
