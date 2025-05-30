@@ -31,8 +31,13 @@ extensions = [
     'sphinx_copybutton',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosummary',
+    'sphinx.ext.autosectionlabel',  # Para referencias automáticas a secciones
     'sphinxcontrib.mermaid',
 ]
+
+# Configuración para autosectionlabel
+autosectionlabel_prefix_document = True  # Incluye el nombre del documento en la referencia
+autosectionlabel_maxdepth = 3  # Nivel máximo de anidación para crear etiquetas automáticas
 
 # Configuración de Mermaid
 mermaid_output_format = 'raw'  # Usa SVG/PNG para PDF, raw para HTML
@@ -77,3 +82,25 @@ autodoc_mock_imports = [
 # -- Options for ReadTheDocs -------------------------------------------------
 html_show_sourcelink = False
 html_show_sphinx = False
+
+# -- Status Badges Configuration --------------------------------------------
+# These variables are used to generate the status badges in the documentation
+# You can customize the branch name if needed
+rtd_version = 'latest'  # or 'stable' for the stable version
+rtd_project = 'thymeleaf-fileinput-minio'  # Your ReadTheDocs project name
+rtd_language = 'es'  # The language of your documentation
+
+# Add the status badges to the HTML context
+html_context = {
+    'build_id': str(int(time.time())),
+    'display_github': True,  # Enable 'Edit on GitHub' link
+    'github_user': 'zademy',  # Your GitHub username/organization
+    'github_repo': 'thymeleaf-fileinput-minio',  # Your repository name
+    'github_version': 'main',  # Your default branch
+    'conf_py_path': '/docs/',  # Path from the root of the project to the docs
+    
+    # ReadTheDocs specific variables for badges
+    'rtd_version': rtd_version,
+    'rtd_project': rtd_project,
+    'rtd_url': f'https://{rtd_project}.readthedocs.io/{rtd_language}/{rtd_version}'
+}
