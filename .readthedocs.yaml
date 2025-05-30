@@ -1,19 +1,40 @@
 version: 2
 
+# Configuración de construcción
 build:
   os: ubuntu-22.04
   tools:
     python: "3.10"
+  jobs:
+    pre_build:
+      # Comandos para limpiar caché antes de la construcción
+      - rm -rf _build
+      - find . -type d -name "__pycache__" -exec rm -rf {} +
 
+# Instalación de dependencias
 python:
   install:
     - requirements: docs/requirements.txt
 
+# Configuración de Sphinx
 sphinx:
   configuration: docs/conf.py
   fail_on_warning: false
+  # Forzar una construcción limpia
+  builder: html
+  # Añadir opciones adicionales para Sphinx
+  build:
+    image: latest
 
+# Formatos de salida
 formats:
   - htmlzip
   - pdf
   - epub
+
+# Configuración de caché
+search:
+  # Forzar reindexación de búsqueda
+  ranking:
+    # Usar un valor aleatorio para evitar caché de búsqueda
+    api_endpoint: "v3"

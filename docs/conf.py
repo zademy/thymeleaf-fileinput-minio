@@ -23,6 +23,13 @@ html_theme = 'sphinx_rtd_theme'
 # Configuración mínima para evitar problemas con las fuentes
 html_static_path = []
 
+# Evitar problemas de caché añadiendo un timestamp a los archivos estáticos
+import time
+html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
+html_context = {
+    'build_id': str(int(time.time())),
+}
+
 # -- Options for autodoc -----------------------------------------------------
 # Mock dependencies that might not be available during documentation build
 autodoc_mock_imports = [
