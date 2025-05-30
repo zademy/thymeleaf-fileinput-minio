@@ -9,7 +9,7 @@
     // Inicializar propiedades necesarias
     if (!window.SphinxRtdTheme.Navigation) {
       window.SphinxRtdTheme.Navigation = {
-        enable: true,
+        enable: function() { return true; },
         wrapper: null,
         build: function() {},
         init: function() {}
