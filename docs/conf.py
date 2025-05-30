@@ -33,23 +33,17 @@ extensions = [
 ]
 
 # Configuración de Mermaid
-mermaid_version = '11'  # Usar Mermaid v11
 mermaid_output_format = 'svg'  # Usar SVG para mejor calidad
 
 # Configuración del tema
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Configuración básica de JavaScript
-html_js_files = [
-    'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js',
-]
-
 def setup(app):
-    # Configuración de Mermaid
-    app.add_js_file(f'https://cdn.jsdelivr.net/npm/mermaid@{mermaid_version}/dist/mermaid.min.js')
+    # Cargar Mermaid v11 desde CDN
+    app.add_js_file('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs', type='module')
     
-    # Configuración básica de Mermaid
+    # Inicialización de Mermaid
     app.add_js_file(None, 
                    body="""
                    document.addEventListener('DOMContentLoaded', function() {
