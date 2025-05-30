@@ -13,6 +13,7 @@ Bienvenido a la documentación de Thymeleaf FileInput con MinIO
    getting-started
    configuration
    usage
+   diagrams
    api
 
 
