@@ -54,10 +54,8 @@ todo_include_todos = False
 html_static_path = ['_static']
 htmlhelp_basename = 'ThymeleafFileInputMiniodoc'
 
-# default: ['localtoc.html', 'relations.html', 'sourcelink.html',
-# 'searchbox.html']
-#
-# html_sidebars = {}
+# Configuración de barras laterales
+html_sidebars = {}
 
 # -- Extension configuration -------------------------------------------------
 
@@ -118,6 +116,6 @@ html_show_sphinx = False
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
-# No usar estilos personalizados
+# Incluir solo los archivos JavaScript necesarios para la funcionalidad básica
 html_css_files = []
-html_js_files = []
+html_js_files = ['js/theme.js']
