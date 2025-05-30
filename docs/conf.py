@@ -35,9 +35,6 @@ html_static_path = ['_static']
 # Añadir archivos JavaScript personalizados
 html_js_files = ['js/sphinx_rtd_theme_fix.js']
 
-# Usar opciones por defecto del tema
-html_theme_options = {}
-
 # -- Options for autodoc -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 
