@@ -6,6 +6,21 @@ copyright = '2025, Zademy'
 author = 'Zademy'
 release = '1.0.0'
 
+# OpenGraph metadata
+ogp_site_url = 'https://thymeleaf-fileinput-minio.readthedocs.io/'
+ogp_site_name = project
+ogp_image = 'https://thymeleaf-fileinput-minio.readthedocs.io/en/latest/_static/logo.png'
+ogp_description = 'Documentación de Thymeleaf FileInput con integración MinIO'
+ogp_type = 'website'
+ogp_enable_meta_description = True
+
+# Opcional: Configuración adicional de OpenGraph
+ogp_custom_meta_tags = [
+    '<meta property="twitter:card" content="summary_large_image" />',
+    '<meta property="twitter:site" content="@zademy_tech" />',
+    '<meta name="theme-color" content="#4c1d95" />',
+]
+
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinxcontrib.mermaid',
@@ -33,7 +48,15 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.autosectionlabel',  # Para referencias automáticas a secciones
     'sphinxcontrib.mermaid',
+    'sphinxcontrib.httpdomain',  # Para documentación de APIs REST
+    'sphinxext.opengraph',  # Para mejorar el compartido en redes sociales
 ]
+
+# Configuración para httpdomain
+http_index_shortname = 'api'
+http_index_localname = 'API Reference'
+http_index_ignore_prefixes = ['/_']
+http_index_ignore_resources = False
 
 # Configuración para autosectionlabel
 autosectionlabel_prefix_document = True  # Incluye el nombre del documento en la referencia
@@ -55,6 +78,8 @@ mermaid_init_js = """
 # Configuración del tema
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_logo = '_static/logo.png'  # Asegúrate de tener un logo en _static/logo.png
+html_favicon = '_static/favicon.ico'  # Añade un favicon si lo tienes
 
 
 # Evitar problemas de caché añadiendo un timestamp a los archivos estáticos
