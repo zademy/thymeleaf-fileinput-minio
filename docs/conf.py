@@ -38,18 +38,28 @@ language = 'es'
 
 # Configuración de extensiones
 extensions = [
+    # Extensiones estándar de Sphinx
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'sphinx_rtd_theme',
-    'myst_parser',
-    'sphinx_copybutton',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosummary',
     'sphinx.ext.autosectionlabel',  # Para referencias automáticas a secciones
-    'sphinxcontrib.mermaid',
-    'sphinxcontrib.httpdomain',  # Para documentación de APIs REST
-    'sphinxext.opengraph',  # Para mejorar el compartido en redes sociales
+    'sphinx.ext.todo',  # Soporte para listas de tareas
+    'sphinx.ext.coverage',  # Verificación de cobertura de documentación
+    'sphinx.ext.ifconfig',  # Directivas condicionales
+    'sphinx.ext.imgconverter',  # Conversión de imágenes
+    'sphinx.ext.graphviz',  # Soporte para gráficos Graphviz
+    'sphinx.ext.extlinks',  # Enlaces externos abreviados
+    'sphinx.ext.mathjax',  # Soporte para fórmulas matemáticas
+    
+    # Extensiones de terceros
+    'sphinx_rtd_theme',  # Tema Read the Docs
+    'myst_parser',  # Soporte para Markdown
+    'sphinx_copybutton',  # Botón de copia en bloques de código
+    'sphinxcontrib.mermaid',  # Diagramas Mermaid
+    'sphinxcontrib.httpdomain',  # Documentación de APIs REST
+    'sphinxext.opengraph',  # Mejora para compartir en redes sociales
 ]
 
 # Configuración para httpdomain
@@ -61,6 +71,37 @@ http_index_ignore_resources = False
 # Configuración para autosectionlabel
 autosectionlabel_prefix_document = True  # Incluye el nombre del documento en la referencia
 autosectionlabel_maxdepth = 3  # Nivel máximo de anidación para crear etiquetas automáticas
+
+# Configuración para las extensiones
+
+# -- Opciones para sphinx.ext.todo --
+todo_include_todos = True  # Mostrar tareas pendientes
+todo_emit_warnings = True  # Mostrar advertencias para tareas pendientes
+
+# -- Opciones para sphinx.ext.coverage --
+coverage_show_missing_items = True  # Mostrar elementos sin documentar
+coverage_write_headline = False  # No escribir encabezado en el informe
+
+# -- Opciones para sphinx.ext.graphviz --
+graphviz_output_format = 'svg'  # Usar SVG para gráficos (mejor calidad)
+graphviz_dot_args = ['-Gfontname=DejaVu Sans',  # Fuente para los gráficos
+                     '-Nfontname=DejaVu Sans',
+                     '-Efontname=DejaVu Sans']
+
+# -- Opciones para sphinx.ext.extlinks --
+extlinks = {
+    'issue': ('https://github.com/zademy/thymeleaf-fileinput-minio/issues/%s', 'issue %s'),
+    'pull': ('https://github.com/zademy/thymeleaf-fileinput-minio/pull/%s', 'PR %s'),
+}
+
+# -- Opciones para sphinx.ext.mathjax --
+mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+mathjax3_config = {
+    'tex': {
+        'inlineMath': [['$', '$'], ['\\(', '\\)']],
+        'displayMath': [['$$', '$$'], ['\\[', '\\]']],
+    },
+}
 
 # Configuración de Mermaid
 mermaid_output_format = 'raw'  # Usa SVG/PNG para PDF, raw para HTML
