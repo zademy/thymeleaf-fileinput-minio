@@ -26,8 +26,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
-    # Eliminamos la extensión que causa problemas
-    # 'readthedocs_sphinx_search',
+    # Nombre correcto de la extensión para la búsqueda en ReadTheDocs
+    'sphinx_search.extension',
 ]
 
 # Configuración del tema de Read the Docs
