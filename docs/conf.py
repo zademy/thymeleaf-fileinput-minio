@@ -32,21 +32,11 @@ language = 'es'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Añadir archivos JavaScript y CSS personalizados
+# Añadir archivos JavaScript personalizados
 html_js_files = ['js/sphinx_rtd_theme_fix.js']
-html_css_files = ['css/custom.css']
 
-# Opciones del tema RTD
-html_theme_options = {
-    'navigation_depth': 4,
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'includehidden': True,
-    'titles_only': False,
-    'display_version': True,
-    'prev_next_buttons_location': 'bottom',
-    'style_external_links': True,
-}
+# Usar opciones por defecto del tema
+html_theme_options = {}
 
 # -- Options for autodoc -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
