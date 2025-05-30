@@ -60,10 +60,8 @@ templates_path = ['_templates']
 # Asegurar que las plantillas personalizadas se apliquen a todas las páginas
 html_additional_pages = {}
 
-# Archivos CSS personalizados para cambiar las fuentes y colores
-html_css_files = [
-    'fira-code.css',
-]
+# No usar archivos CSS personalizados
+# html_css_files = []
 
 # Configuración del tema RTD con todas las opciones disponibles
 html_theme_options = {
