@@ -13,7 +13,6 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
 ]
-
 import sys
 sys.setrecursionlimit(1_500)
 
@@ -28,29 +27,30 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
     'sphinx_rtd_theme',
-    'sphinxcontrib.mermaid',
     'myst_parser',
+    'sphinx_copybutton',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.autosummary',
+    'sphinxcontrib.mermaid',
 ]
 
 # Configuración de Mermaid
-mermaid_output_format = 'svg'  # Usar SVG para mejor calidad
+mermaid_output_format = 'raw'  # Usa SVG/PNG para PDF, raw para HTML
+mermaid_d3_zoom = False  # Desactivar zoom por defecto
+mermaid_init_js = """
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        securityLevel: 'loose',
+        fontFamily: 'Arial, sans-serif',
+        logLevel: 'fatal'  # Reducir logs en consola
+    });
+"""
 
 # Configuración del tema
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Configuración de archivos estáticos
-html_static_path = ['_static']
-
-# Configuración del tema
-html_theme = 'sphinx_rtd_theme'
-html_theme_options = {
-    'navigation_depth': 4,
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'includehidden': True,
-    'titles_only': False
-}
 
 # Evitar problemas de caché añadiendo un timestamp a los archivos estáticos
 import time
@@ -59,29 +59,9 @@ html_context = {
     'build_id': str(int(time.time())),
 }
 
-def setup(app):
-    # Cargar Mermaid v11 desde CDN
-    app.add_js_file('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs', type='module')
-    
-    # Inicialización de Mermaid
-    app.add_js_file(None, 
-                   body="""
-                   document.addEventListener('DOMContentLoaded', function() {
-                       if (typeof mermaid !== 'undefined') {
-                           mermaid.initialize({
-                               startOnLoad: true,
-                               theme: 'default',
-                               securityLevel: 'loose',
-                               fontFamily: 'Arial, sans-serif'
-                           });
-                       }
-                   });
-                   """,
-                   priority=200)
-    
-    # Asegurarse de que el directorio _static existe
-    import os
-    os.makedirs('_static', exist_ok=True)
+# Configuración de Mermaid
+mermaid_version = '11.2.0'  # Última versión estable
+
 
 # -- Options for autodoc -----------------------------------------------------
 # Mock dependencies that might not be available during documentation build
