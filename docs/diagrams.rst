@@ -5,7 +5,7 @@ Diagramas del Proyecto
 
 Esta sección contiene los diagramas de arquitectura y flujo del proyecto Thymeleaf FileInput con MinIO, generados con Mermaid.
 
-.. _arquitectura:
+.. _arquitectura-general:
 
 Arquitectura General
 -------------------

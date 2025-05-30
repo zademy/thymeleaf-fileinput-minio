@@ -1,0 +1,37 @@
+/* Estilos para el sidebar */
+.sidebar-menu {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.sidebar-items {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar-items li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-items a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sidebar-items a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los anclajes */
+:target {
+    padding-top: 70px;
+    margin-top: -70px;
+    display: block;
+}

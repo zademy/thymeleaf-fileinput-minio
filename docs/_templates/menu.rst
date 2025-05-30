@@ -1,13 +1,16 @@
 .. This is a reusable menu component for all documentation pages
 
-.. container:: sidebar
+.. container:: sidebar-menu
+   :name: sidebar-nav
 
-   .. toctree::
-      :maxdepth: 1
-      :caption: Navegación
-      
-      :doc:`Inicio <../index>`
-      :doc:`Guía Rápida <../getting-started>`
-      :doc:`Configuración <../configuration>`
-      :doc:`Diagramas <../diagrams>`
-      :doc:`API <../api>`
+   .. rst-class:: sidebar-title
+   **Navegación**
+
+   .. rst-class:: sidebar-items
+   - :doc:`Inicio <index>`
+   - :doc:`Guía Rápida <getting-started>`
+   - :doc:`Configuración <configuration>`
+   - :doc:`Diagramas <diagrams>`
+     - `Arquitectura General <diagrams#arquitectura-general>`_
+     - `Flujo de Subida <diagrams#flujo-subida>`_
+   - :doc:`API Reference <api>`

@@ -42,8 +42,9 @@ html_theme_options = {
     'titles_only': False
 }
 
-# Configuración mínima para evitar problemas con las fuentes
-html_static_path = []
+# Configuración para archivos estáticos
+html_static_path = ['_static']
+html_css_files = ['css/custom.css']
 
 # Evitar problemas de caché añadiendo un timestamp a los archivos estáticos
 import time
