@@ -116,6 +116,9 @@ html_show_sphinx = False
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
-# Incluir solo los archivos JavaScript necesarios para la funcionalidad básica
+# Incluir jQuery y otros archivos JavaScript necesarios para la funcionalidad global
 html_css_files = []
-html_js_files = ['js/theme.js']
+html_js_files = [
+    'js/theme.js',
+    ('https://code.jquery.com/jquery-3.6.0.min.js', {'async': 'async', 'integrity': 'sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', 'crossorigin': 'anonymous'})
+]
