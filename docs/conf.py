@@ -33,8 +33,36 @@ sys.setrecursionlimit(1_500)
 
 # Configuración de templates
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-language = 'es'
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**/en/**', '**/es/**']
+
+# Configuración de internacionalización (i18n)
+language = 'es'  # Idioma por defecto
+locale_dirs = ['locales/']  # Directorio donde se guardarán las traducciones
+gettext_compact = False  # Genera archivos .po separados por documento
+locale_purge = True  # Elimina archivos obsoletos al actualizar
+
+translations = [
+    ('es', 'Español'),
+    ('en', 'English'),
+    # Añade más idiomas según sea necesario
+]
+
+# Configuración de metadatos para cada idiomall_ = {}
+for code, name in translations:
+    if code == 'es':
+        all_[code] = {
+            'version': release,
+            'language': 'es',
+            'og:locale': 'es_MX',
+            'og:description': 'Documentación de Thymeleaf FileInput con integración MinIO',
+        }
+    elif code == 'en':
+        all_[code] = {
+            'version': release,
+            'language': 'en',
+            'og:locale': 'en_US',
+            'og:description': 'Thymeleaf FileInput with MinIO integration documentation',
+        }
 
 # Configuración de extensiones
 extensions = [
@@ -49,6 +77,7 @@ extensions = [
     'sphinx.ext.coverage',  # Verificación de cobertura de documentación
     'sphinx.ext.ifconfig',  # Directivas condicionales
     'sphinx.ext.imgconverter',  # Conversión de imágenes
+    'sphinx.ext.i18n',  # Soporte para internacionalización
     'sphinx.ext.graphviz',  # Soporte para gráficos Graphviz
     'sphinx.ext.extlinks',  # Enlaces externos abreviados
     'sphinx.ext.mathjax',  # Soporte para fórmulas matemáticas
@@ -148,6 +177,24 @@ autodoc_mock_imports = [
 # -- Options for ReadTheDocs -------------------------------------------------
 html_show_sourcelink = False
 html_show_sphinx = False
+
+# Configuración para múltiples idiomas en ReadTheDocs
+html_context = {
+    'display_github': True,  # Integración con GitHub
+    'github_user': 'zademy',  # Tu usuario/organización de GitHub
+    'github_repo': 'thymeleaf-fileinput-minio',  # Nombre del repositorio
+    'github_version': 'main',  # Rama por defecto
+    'conf_py_path': '/docs/',  # Ruta a la documentación
+    'languages': translations,  # Lista de idiomas disponibles
+    'current_language': language,  # Idioma actual
+    'current_version': release,  # Versión actual
+    'version': release,  # Compatibilidad con versiones antiguas
+    'language': language,  # Compatibilidad con versiones antiguas
+    'languages_dict': {code: name for code, name in translations},  # Diccionario de idiomas
+    'translations': translations,  # Lista de idiomas
+    'default_lang': 'es',  # Idioma por defecto
+    'LANGUAGES': translations,  # Compatibilidad con algunos temas
+}
 
 # -- Status Badges Configuration --------------------------------------------
 # These variables are used to generate the status badges in the documentation
