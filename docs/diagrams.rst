@@ -68,7 +68,7 @@ Estructura de Directorios
    :caption: Estructura de Directorios
 
    %%{init: {'theme': 'default'}}%%
-   flowchart TD
+   graph TD
        A[src/] --> B[main/]
        A --> C[test/]
        B --> B1[java/]
