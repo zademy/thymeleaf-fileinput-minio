@@ -215,15 +215,6 @@ html_show_sphinx = False
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
-# -- Configuración de fuentes personalizadas -----------------------------------------
-
-# Archivos CSS personalizados para cambiar las fuentes
-html_css_files = [
-    'custom.css',
-]
-
-# Archivos JavaScript personalizados y fuentes web de Google
-html_js_files = [
-    'custom.js',
-    ('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap', {'async': 'async'}),
-]
+# No usar estilos personalizados
+html_css_files = []
+html_js_files = []
