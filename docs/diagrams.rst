@@ -11,8 +11,6 @@ Arquitectura General
 -------------------
 
 .. mermaid::
-   :align: center
-   :width: 80%
    :caption: Diagrama de Arquitectura
 
    graph TD
@@ -36,8 +34,6 @@ Flujo de Subida de Archivos
 -------------------------
 
 .. mermaid::
-   :align: center
-   :width: 80%
    :caption: Flujo de Subida de Archivos
 
    sequenceDiagram

@@ -14,10 +14,22 @@ extensions = [
     'sphinxcontrib.mermaid',
 ]
 
+import sys
+sys.setrecursionlimit(1_500)
+
 # Configuración de templates
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 language = 'es'
+
+# Configuración para Mermaid
+mermaid_params = {
+    'theme': 'default',
+    'themeVariables': {
+        'primaryColor': '#f0f0f0',
+        'edgeLabelBackground':'#ffffff'
+    }
+}
 
 # -- Options for HTML output -------------------------------------------------
 # Configuración del tema

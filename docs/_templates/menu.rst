@@ -3,32 +3,11 @@
 .. container:: sidebar
 
    .. toctree::
-      :maxdepth: 2
-      :caption: Guía de Inicio Rápido
-      :glob:
+      :maxdepth: 1
+      :caption: Navegación
       
-      getting-started
-      usage
-
-   .. toctree::
-      :maxdepth: 2
-      :caption: Configuración
-      :glob:
-      
-      configuration
-
-   .. toctree::
-      :maxdepth: 2
-      :caption: Diagramas
-      :glob:
-      
-      diagrams
-      :ref:`arquitectura <diagrams>`
-      :ref:`flujo-subida <diagrams>`
-
-   .. toctree::
-      :maxdepth: 2
-      :caption: Referencia de la API
-      :glob:
-      
-      api
+      :doc:`Inicio <../index>`
+      :doc:`Guía Rápida <../getting-started>`
+      :doc:`Configuración <../configuration>`
+      :doc:`Diagramas <../diagrams>`
+      :doc:`API <../api>`
