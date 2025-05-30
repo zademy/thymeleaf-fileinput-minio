@@ -78,10 +78,10 @@ extensions = [
     'sphinx.ext.coverage',  # Verificación de cobertura de documentación
     'sphinx.ext.ifconfig',  # Directivas condicionales
     'sphinx.ext.imgconverter',  # Conversión de imágenes
-    'sphinx.ext.i18n',  # Soporte para internacionalización
     'sphinx.ext.graphviz',  # Soporte para gráficos Graphviz
     'sphinx.ext.extlinks',  # Enlaces externos abreviados
     'sphinx.ext.mathjax',  # Soporte para fórmulas matemáticas
+    'sphinx_intl',  # Soporte para internacionalización
     
     # Extensiones de terceros
     'sphinx_rtd_theme',  # Tema Read the Docs

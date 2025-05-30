@@ -3,6 +3,7 @@ sphinx>=7.0.0,<8.0.0
 sphinx_rtd_theme>=2.0.0
 sphinxcontrib-mermaid>=1.0.0
 myst-parser>=2.0.0
+sphinx-intl>=2.1.0  # Para soporte de internacionalización
 
 # Dependencias para Mermaid v11
 sphinxcontrib-httpdomain>=1.8.0
