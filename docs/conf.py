@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
+    'sphinxcontrib.jquery',  # Añadido explícitamente para resolver problemas con jQuery
     'sphinx_rtd_theme',
 ]
 
@@ -30,6 +31,9 @@ language = 'es'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# Añadir archivos JavaScript personalizados
+html_js_files = ['js/sphinx_rtd_theme_fix.js']
 
 # -- Options for autodoc -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
