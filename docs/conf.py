@@ -119,6 +119,10 @@ html_show_copyright = True
 # Incluir jQuery y otros archivos JavaScript necesarios para la funcionalidad global
 html_css_files = []
 html_js_files = [
-    'js/theme.js',
-    ('https://code.jquery.com/jquery-3.6.0.min.js', {'async': 'async', 'integrity': 'sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', 'crossorigin': 'anonymous'})
+    # Cargar jQuery primero, sin async para garantizar que esté disponible
+    ('https://code.jquery.com/jquery-3.6.0.min.js', {'integrity': 'sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=', 'crossorigin': 'anonymous'}),
+    # Luego cargar nuestro script que garantiza que jQuery esté disponible
+    'js/jquery-ensure.js',
+    # Finalmente cargar otros scripts
+    'js/theme.js'
 ]
