@@ -84,22 +84,25 @@ a:hover {
 }
 
 .wy-menu-vertical a:hover {
-    background-color: var(--blue-lightest);
-    color: var(--blue-secondary);
+    background-color: #0078D7; /* Azul un poco más claro al hacer hover */
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil para mejorar legibilidad */
 }
 
 .wy-menu-vertical li.current {
-    background-color: var(--blue-lightest);
+    background-color: #40A9FF; /* Azul claro para el elemento activo */
 }
 
 .wy-menu-vertical li.current > a {
-    color: var(--blue-secondary);
-    border-color: var(--blue-primary);
+    color: #ffffff !important;
+    border-color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .wy-menu-vertical li.current > a:hover {
-    background-color: var(--blue-lighter);
-    color: var(--blue-secondary);
+    background-color: #0078D7;
+    color: #ffffff !important;
 }
 
 /* Personalización de bloques de código */
