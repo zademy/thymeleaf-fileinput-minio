@@ -2,6 +2,8 @@
 
 /* Importar Fira Code desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 /* Fuente principal para el texto del cuerpo */
 body, p, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, address, hr, table, caption, th, td {
@@ -15,9 +17,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Fuente para el código - Usando Fira Code */
-code, pre, tt, .highlight {
-    font-family: 'Fira Code', monospace;
+code, pre, tt, .highlight, .literal, .rst-content code, .rst-content tt, .rst-content pre.literal-block, .rst-content div[class^='highlight'] {
+    font-family: 'Fira Code', monospace !important;
     font-feature-settings: "calt" 1; /* Para habilitar ligaduras */
+}
+
+/* Asegurar que Fira Code se aplique a todos los elementos de código */
+.rst-content code, .rst-content tt {
+    font-family: 'Fira Code', monospace !important;
+    font-size: 0.9em;
+}
+
+/* Aplicar Fira Code a bloques de código específicos de Sphinx */
+.highlight .n, .highlight .na, .highlight .nb, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .nl, .highlight .nn, .highlight .nx, .highlight .py, .highlight .nt, .highlight .nv, .highlight .ow, .highlight .w, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .il {
+    font-family: 'Fira Code', monospace !important;
 }
 
 /* Tamaños de fuente personalizados */

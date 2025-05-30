@@ -1,0 +1,21 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        code, pre, tt, .highlight, .literal, .rst-content code, .rst-content tt, 
+        .rst-content pre.literal-block, .rst-content div[class^='highlight'] {
+            font-family: 'Fira Code', monospace !important;
+            font-feature-settings: "calt" 1;
+        }
+        
+        .rst-content code, .rst-content tt {
+            font-family: 'Fira Code', monospace !important;
+        }
+        
+        .highlight * {
+            font-family: 'Fira Code', monospace !important;
+        }
+    </style>
+{% endblock %}

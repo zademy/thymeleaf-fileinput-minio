@@ -50,13 +50,9 @@ extensions = [
 ]
 
 # Configuración del tema de Read the Docs
-# Intentar importar sphinx_rtd_theme, pero usar el tema por defecto si no está disponible
-try:
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-except ImportError:
-    html_theme = 'alabaster'  # Tema por defecto
+import sphinx_rtd_theme
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -223,7 +219,8 @@ html_css_files = [
     'custom.css',
 ]
 
-# Cargar fuentes web de Google
+# Archivos JavaScript personalizados y fuentes web de Google
 html_js_files = [
+    'custom.js',
     ('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap', {'async': 'async'}),
 ]
