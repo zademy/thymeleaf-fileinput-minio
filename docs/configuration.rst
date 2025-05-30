@@ -2,8 +2,6 @@
 Configuración
 ==================
 
-.. include:: _templates/menu.rst
-
 Este documento detalla las opciones de configuración disponibles para el proyecto Thymeleaf FileInput con MinIO.
 
 Configuración de la Aplicación

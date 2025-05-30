@@ -1,5 +1,3 @@
-.. include:: _templates/menu.rst
-
 Diagramas del Proyecto
 =====================
 

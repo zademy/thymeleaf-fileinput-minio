@@ -5,8 +5,6 @@ API Reference
 
 Esta sección documenta la API del proyecto Thymeleaf FileInput con MinIO.
 
-.. include:: _templates/menu.rst
-
 Controladores
 ------------
 

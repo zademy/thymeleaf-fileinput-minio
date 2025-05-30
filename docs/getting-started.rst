@@ -2,8 +2,6 @@
 Guía de Inicio Rápido
 ==================
 
-.. include:: _templates/menu.rst
-
 Este documento te guiará a través de la configuración inicial del proyecto Thymeleaf FileInput con MinIO.
 
 Requisitos Previos
