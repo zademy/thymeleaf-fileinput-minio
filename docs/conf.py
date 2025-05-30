@@ -43,7 +43,7 @@ mermaid_init_js = """
         theme: 'default',
         securityLevel: 'loose',
         fontFamily: 'Arial, sans-serif',
-        logLevel: 'fatal'  # Reducir logs en consola
+        logLevel: 'fatal'
     });
 """
 
