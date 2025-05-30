@@ -41,7 +41,6 @@ html_static_path = ['_static']
 
 # Configuración de archivos estáticos
 html_static_path = ['_static']
-html_css_files = ['css/custom.css']
 
 # Configuración del tema
 html_theme = 'sphinx_rtd_theme'
