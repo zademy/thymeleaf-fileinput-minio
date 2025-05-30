@@ -57,11 +57,9 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# Asegurar que las plantillas personalizadas se apliquen a todas las páginas
+# No usar plantillas ni estilos personalizados
 html_additional_pages = {}
-
-# No usar archivos CSS personalizados
-# html_css_files = []
+html_css_files = []
 
 # Configuración del tema RTD con todas las opciones disponibles
 html_theme_options = {
@@ -69,13 +67,12 @@ html_theme_options = {
     'analytics_id': '',  # Proporcionado por Google en tu dashboard (dejar vacío si no se usa)
     'analytics_anonymize_ip': False,
     
-    # Opciones de apariencia
-    'logo_only': False,  # Solo mostrar el logo, no el nombre del proyecto
-    'display_version': True,  # Mostrar la versión del proyecto
-    'prev_next_buttons_location': 'bottom',  # Ubicación de los botones anterior/siguiente
-    'style_external_links': False,  # Estilo para enlaces externos
-    'vcs_pageview_mode': '',  # Modo de visualización de páginas VCS
-    'style_nav_header_background': '#2980B9',  # Color de fondo del encabezado de navegación
+    # Opciones de apariencia (valores por defecto)
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    'vcs_pageview_mode': ''
     
     # Opciones de menú desplegable
     'flyout_display': 'hidden',  # Comportamiento del menú desplegable
