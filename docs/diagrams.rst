@@ -30,7 +30,7 @@ Arquitectura General
        class C system
        class D storage
 
-   Diagrama general de la arquitectura del sistema
+Diagrama general de la arquitectura del sistema
 
 .. _flujo-subida:
 
@@ -59,7 +59,7 @@ Flujo de Subida de Archivos
        Controlador-->>-Navegador: 9. Respuesta JSON
        Navegador-->>Usuario: 10. Confirmación de subida
 
-   Proceso de subida de archivos al servidor MinIO
+Proceso de subida de archivos al servidor MinIO
 
 Estructura de Directorios
 -----------------------
