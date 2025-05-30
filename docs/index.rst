@@ -8,17 +8,36 @@ Bienvenido a la documentación de Thymeleaf FileInput con MinIO
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenido:
-
+   :caption: Guía de Inicio Rápido
+   :name: guia-inicio
+   
    getting-started
-   configuration
    usage
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Configuración
+   :name: configuracion
+   
+   configuration
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Diagramas
+   :name: diagramas
+   
    diagrams
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Referencia de la API
+   :name: api-reference
+   
    api
 
 
-Indices y tablas
-================
+Índice y búsqueda
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`
