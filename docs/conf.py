@@ -28,13 +28,16 @@ author = 'Zademy'
 version = '1.0'  # Versión corta, por ejemplo '1.0'
 release = '1.0.0'  # Versión completa, por ejemplo '1.0.0'
 
-# Información para enlaces a GitHub y versiones
+# Información para enlaces a GitHub y versiones, y archivos CSS personalizados
 html_context = {
     'display_github': True,
     'github_user': 'zademy',
     'github_repo': 'thymeleaf-fileinput-minio',
     'github_version': 'master',  # Rama o tag que se está visualizando
     'conf_py_path': '/docs/',    # Ruta al directorio docs en tu repositorio
+    'css_files': [
+        '_static/custom.css',
+    ],
 }
 
 # -- General configuration ---------------------------------------------------
@@ -56,6 +59,9 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+
+# Asegurar que las plantillas personalizadas se apliquen a todas las páginas
+html_additional_pages = {}
 
 # Configuración del tema RTD con todas las opciones disponibles
 html_theme_options = {
