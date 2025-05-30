@@ -1,0 +1,83 @@
+/* Personalización de fuentes para la documentación */
+
+/* Fuente principal para el texto del cuerpo */
+body, p, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, address, hr, table, caption, th, td {
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Fuente para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+}
+
+/* Fuente para el código */
+code, pre, tt, .highlight {
+    font-family: 'Source Code Pro', 'Consolas', 'Monaco', 'Andale Mono', monospace;
+}
+
+/* Tamaños de fuente personalizados */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Personalización de la barra lateral */
+.wy-side-nav-search, .wy-nav-top {
+    background-color: #2980B9;
+}
+
+/* Personalización de enlaces */
+a {
+    color: #2980B9;
+}
+
+a:hover {
+    color: #3091d1;
+}
+
+/* Personalización de la tabla de contenidos */
+.wy-menu-vertical a {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-size: 0.95em;
+}
+
+/* Personalización de bloques de código */
+.highlight {
+    background: #f8f8f8;
+    border-radius: 3px;
+}
+
+/* Personalización de tablas */
+table.docutils {
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Personalización de botones */
+.btn {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Personalización de notas y advertencias */
+.admonition {
+    border-radius: 3px;
+}
+
+/* Personalización del selector de versiones */
+.rst-versions {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
