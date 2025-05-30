@@ -1,5 +1,8 @@
 /* Personalización de fuentes para la documentación */
 
+/* Importar Fira Code desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 /* Fuente principal para el texto del cuerpo */
 body, p, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, address, hr, table, caption, th, td {
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -11,9 +14,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-/* Fuente para el código */
+/* Fuente para el código - Usando Fira Code */
 code, pre, tt, .highlight {
-    font-family: 'Source Code Pro', 'Consolas', 'Monaco', 'Andale Mono', monospace;
+    font-family: 'Fira Code', monospace;
+    font-feature-settings: "calt" 1; /* Para habilitar ligaduras */
 }
 
 /* Tamaños de fuente personalizados */
