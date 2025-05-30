@@ -23,13 +23,13 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 language = 'es'
 
 # Configuración para Mermaid
-mermaid_version = '9.4.3'
+mermaid_version = '10.9.0'
 
-mermaid_params = [
-    '--theme', 'default',
-    '--width', '100%',
-    '--backgroundColor', 'transparent'
-]
+mermaid_params = {
+    'theme': 'default',
+    'startOnLoad': 'true',
+    'securityLevel': 'loose'
+}
 
 html_js_files = [
     f'https://cdn.jsdelivr.net/npm/mermaid@{mermaid_version}/dist/mermaid.min.js'
