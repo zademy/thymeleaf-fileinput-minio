@@ -23,13 +23,19 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 language = 'es'
 
 # Configuración para Mermaid
-mermaid_params = [
-    '--theme', 'forest',
-    '--width', '100%',
-    '--backgroundColor', 'transparent'
-]
-
+mermaid_params = {
+    'theme': 'forest',
+    'themeVariables': {
+        'primaryColor': '#f0f0f0',
+        'edgeLabelBackground': '#ffffff'
+    }
+}
 mermaid_version = '10.9.0'
+
+html_js_files = [
+    'https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js',
+    'js/mermaid-init.js'
+]
 
 # -- Options for HTML output -------------------------------------------------
 # Configuración del tema
