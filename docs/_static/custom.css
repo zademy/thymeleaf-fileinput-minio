@@ -79,6 +79,8 @@ a:hover {
 .wy-menu-vertical a {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     font-size: 0.95em;
+    color: #ffffff !important; /* Texto blanco para mejor contraste */
+    font-weight: 500; /* Texto más grueso para mejor legibilidad */
 }
 
 .wy-menu-vertical a:hover {
@@ -225,7 +227,7 @@ table.docutils tbody tr:hover {
 
 /* Mejora de la navegación */
 .wy-nav-side {
-    background-color: #f8f9fa;
+    background-color: #0063B1; /* Fondo azul oscuro para mejor contraste */
 }
 
 .wy-side-nav-search input[type="text"] {
