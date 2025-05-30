@@ -1,90 +1,26 @@
-/* Personalización de fuentes para la documentación */
+/* Estilos básicos para ReadTheDocs */
 
-/* Importar Fira Code desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* Importar Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
-/* Fuente principal para el texto del cuerpo */
-body, p, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, address, hr, table, caption, th, td {
-    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* Fuente para los encabezados */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
-}
-
-/* Fuente para el código - Usando Fira Code */
-code, pre, tt, .highlight, .literal, .rst-content code, .rst-content tt, .rst-content pre.literal-block, .rst-content div[class^='highlight'] {
+/* Aplicar Fira Code al código */
+code, pre, tt, .highlight {
     font-family: 'Fira Code', monospace !important;
-    font-feature-settings: "calt" 1; /* Para habilitar ligaduras */
+    font-feature-settings: "calt" 1;
 }
 
-/* Asegurar que Fira Code se aplique a todos los elementos de código */
-.rst-content code, .rst-content tt {
-    font-family: 'Fira Code', monospace !important;
-    font-size: 0.9em;
+/* Colores del menú lateral */
+.wy-side-nav-search {
+    background-color: #0078D7;
 }
 
-/* Aplicar Fira Code a bloques de código específicos de Sphinx */
-.highlight .n, .highlight .na, .highlight .nb, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .nl, .highlight .nn, .highlight .nx, .highlight .py, .highlight .nt, .highlight .nv, .highlight .ow, .highlight .w, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .bp, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .il {
-    font-family: 'Fira Code', monospace !important;
+.wy-nav-side {
+    background-color: #0063B1;
 }
 
-/* Tamaños de fuente personalizados */
-body {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-h1 {
-    font-size: 2.2em;
-}
-
-h2 {
-    font-size: 1.8em;
-}
-
-h3 {
-    font-size: 1.5em;
-}
-
-/* Personalización de la barra lateral */
-.wy-side-nav-search, .wy-nav-top {
-    background-color: #0078D7; /* Azul principal */
-}
-
-.wy-side-nav-search > a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1.3em;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.wy-side-nav-search > div.version {
-    color: #ffffff;
-    opacity: 0.9;
-}
-
-/* Personalización de colores basados en la imagen */
-:root {
-    --blue-primary: #0078D7;      /* Azul principal */
-    --blue-secondary: #0063B1;    /* Azul secundario más oscuro */
-    --blue-light: #40A9FF;        /* Azul claro */
-    --blue-lighter: #91CAFF;      /* Azul más claro */
-    --blue-lightest: #E6F7FF;     /* Azul muy claro para fondos */
-}
-
-/* Personalización de enlaces */
-a {
-    color: var(--blue-primary);
-}
-
-a:hover {
-    color: var(--blue-light);
-    text-decoration: none;
+/* Texto del menú en blanco */
+.wy-menu-vertical a {
+    color: #ffffff !important;
 }
 
 /* Personalización de la tabla de contenidos */

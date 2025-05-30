@@ -3,95 +3,15 @@
 {% block breadcrumbs_aside %}
 {{ super() }}
 <script>
-    // Asegurar que los estilos se apliquen a todas las páginas
+    // Script más simple para cargar la fuente Fira Code
     document.addEventListener('DOMContentLoaded', function() {
-        // Cargar las fuentes
-        const fontLinks = [
-            'https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap',
-            'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap'
-        ];
-        
-        fontLinks.forEach(function(url) {
-            if (!document.querySelector(`link[href="${url}"]`)) {
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = url;
-                document.head.appendChild(link);
-            }
-        });
-        
-        // Aplicar estilos al menú lateral
-        const style = document.createElement('style');
-        style.textContent = `
-            :root {
-                --blue-primary: #0078D7;
-                --blue-secondary: #0063B1;
-                --blue-light: #40A9FF;
-                --blue-lighter: #91CAFF;
-                --blue-lightest: #E6F7FF;
-            }
-            
-            /* Estilos para el menú lateral */
-            .wy-nav-side {
-                background-color: #0063B1 !important;
-            }
-            
-            .wy-side-nav-search, .wy-nav-top {
-                background-color: #0078D7 !important;
-            }
-            
-            .wy-side-nav-search > a {
-                color: #ffffff !important;
-                font-weight: 600 !important;
-                font-size: 1.3em !important;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-            }
-            
-            .wy-side-nav-search > div.version {
-                color: #ffffff !important;
-                opacity: 0.9 !important;
-            }
-            
-            .wy-menu-vertical a {
-                color: #ffffff !important;
-                font-weight: 500 !important;
-                padding: 12px 15px !important;
-            }
-            
-            .wy-menu-vertical a:hover {
-                background-color: #0078D7 !important;
-                color: #ffffff !important;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-            }
-            
-            .wy-menu-vertical li.current {
-                background-color: #40A9FF !important;
-            }
-            
-            .wy-menu-vertical li.current > a {
-                color: #ffffff !important;
-                border-color: #ffffff !important;
-                font-weight: 600 !important;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-            }
-            
-            /* Estilos para submenús */
-            .wy-menu-vertical li.toctree-l2 a, 
-            .wy-menu-vertical li.toctree-l3 a, 
-            .wy-menu-vertical li.toctree-l4 a {
-                color: rgba(255, 255, 255, 0.9) !important;
-                background-color: rgba(0, 0, 0, 0.15) !important;
-                border-left: 2px solid rgba(255, 255, 255, 0.3) !important;
-            }
-            
-            /* Estilos para código */
-            code, pre, tt, .highlight, .literal, .rst-content code, .rst-content tt, 
-            .rst-content pre.literal-block, .rst-content div[class^='highlight'] {
-                font-family: 'Fira Code', monospace !important;
-                font-feature-settings: "calt" 1 !important;
-            }
-        `;
-        document.head.appendChild(style);
+        // Cargar Fira Code
+        if (!document.querySelector('link[href*="Fira+Code"]')) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap';
+            document.head.appendChild(link);
+        }
     });
 </script>
 {% endblock %}

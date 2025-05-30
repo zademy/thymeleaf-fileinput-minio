@@ -3,60 +3,12 @@
 {% block extrahead %}
     {{ super() }}
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/custom.css', 1) }}" />
-    <script type="text/javascript" src="{{ pathto('_static/custom.js', 1) }}"></script>
     <style>
-        /* Variables de color */
-        :root {
-            --blue-primary: #0078D7;      /* Azul principal */
-            --blue-secondary: #0063B1;    /* Azul secundario más oscuro */
-            --blue-light: #40A9FF;        /* Azul claro */
-            --blue-lighter: #91CAFF;      /* Azul más claro */
-            --blue-lightest: #E6F7FF;     /* Azul muy claro para fondos */
-        }
-        
         /* Estilos para Fira Code */
         code, pre, tt, .highlight, .literal, .rst-content code, .rst-content tt, 
         .rst-content pre.literal-block, .rst-content div[class^='highlight'] {
             font-family: 'Fira Code', monospace !important;
             font-feature-settings: "calt" 1;
-        }
-        
-        .rst-content code, .rst-content tt {
-            font-family: 'Fira Code', monospace !important;
-        }
-        
-        .highlight * {
-            font-family: 'Fira Code', monospace !important;
-        }
-        
-        /* Estilos para el menú lateral */
-        .wy-nav-side {
-            background-color: #0063B1;
-        }
-        
-        .wy-side-nav-search, .wy-nav-top {
-            background-color: #0078D7;
-        }
-        
-        .wy-menu-vertical a {
-            color: #ffffff !important;
-            font-weight: 500;
-        }
-        
-        .wy-menu-vertical a:hover {
-            background-color: #0078D7;
-            color: #ffffff !important;
-        }
-        
-        .wy-menu-vertical li.current {
-            background-color: #40A9FF;
-        }
-        
-        .wy-menu-vertical li.current > a {
-            color: #ffffff !important;
-            border-color: #ffffff;
         }
     </style>
 {% endblock %}

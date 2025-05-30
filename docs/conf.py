@@ -28,16 +28,13 @@ author = 'Zademy'
 version = '1.0'  # Versión corta, por ejemplo '1.0'
 release = '1.0.0'  # Versión completa, por ejemplo '1.0.0'
 
-# Información para enlaces a GitHub y versiones, y archivos CSS personalizados
+# Información para enlaces a GitHub y versiones
 html_context = {
     'display_github': True,
     'github_user': 'zademy',
     'github_repo': 'thymeleaf-fileinput-minio',
     'github_version': 'master',  # Rama o tag que se está visualizando
     'conf_py_path': '/docs/',    # Ruta al directorio docs en tu repositorio
-    'css_files': [
-        '_static/custom.css',
-    ],
 }
 
 # -- General configuration ---------------------------------------------------
@@ -62,6 +59,11 @@ templates_path = ['_templates']
 
 # Asegurar que las plantillas personalizadas se apliquen a todas las páginas
 html_additional_pages = {}
+
+# Archivos CSS personalizados para cambiar las fuentes y colores
+html_css_files = [
+    'fira-code.css',
+]
 
 # Configuración del tema RTD con todas las opciones disponibles
 html_theme_options = {
