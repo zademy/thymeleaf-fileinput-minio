@@ -8,10 +8,10 @@ release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 extensions = [
+    'sphinxcontrib.mermaid',
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'sphinxcontrib.mermaid',
 ]
 
 import sys
@@ -23,13 +23,13 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 language = 'es'
 
 # Configuración para Mermaid
-mermaid_params = {
-    'theme': 'default',
-    'themeVariables': {
-        'primaryColor': '#f0f0f0',
-        'edgeLabelBackground':'#ffffff'
-    }
-}
+mermaid_params = [
+    '--theme', 'forest',
+    '--width', '100%',
+    '--backgroundColor', 'transparent'
+]
+
+mermaid_version = '10.9.0'
 
 # -- Options for HTML output -------------------------------------------------
 # Configuración del tema
