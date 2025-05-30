@@ -56,6 +56,18 @@ h3 {
     background-color: #0078D7; /* Azul principal */
 }
 
+.wy-side-nav-search > a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.3em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.wy-side-nav-search > div.version {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
 /* Personalización de colores basados en la imagen */
 :root {
     --blue-primary: #0078D7;      /* Azul principal */
@@ -81,6 +93,33 @@ a:hover {
     font-size: 0.95em;
     color: #ffffff !important; /* Texto blanco para mejor contraste */
     font-weight: 500; /* Texto más grueso para mejor legibilidad */
+    padding: 12px 15px; /* Mayor padding para facilitar la lectura y el clic */
+}
+
+/* Estilos para submenús */
+.wy-menu-vertical li.toctree-l2 a, 
+.wy-menu-vertical li.toctree-l3 a, 
+.wy-menu-vertical li.toctree-l4 a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    background-color: rgba(0, 0, 0, 0.15); /* Fondo ligeramente más oscuro para submenús */
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para submenús al pasar el cursor */
+.wy-menu-vertical li.toctree-l2 a:hover, 
+.wy-menu-vertical li.toctree-l3 a:hover, 
+.wy-menu-vertical li.toctree-l4 a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #ffffff !important;
+}
+
+/* Estilos para submenús activos */
+.wy-menu-vertical li.toctree-l2.current > a, 
+.wy-menu-vertical li.toctree-l3.current > a, 
+.wy-menu-vertical li.toctree-l4.current > a {
+    background-color: rgba(64, 169, 255, 0.3);
+    color: #ffffff !important;
+    border-left: 2px solid #ffffff;
 }
 
 .wy-menu-vertical a:hover {
@@ -234,9 +273,18 @@ table.docutils tbody tr:hover {
 }
 
 .wy-side-nav-search input[type="text"] {
-    border-color: var(--blue-lighter);
-    box-shadow: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333333;
+    font-weight: 500;
+}
+
+.wy-side-nav-search input[type="text"]:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    outline: none;
 }
 
 /* Estilo para imágenes */
