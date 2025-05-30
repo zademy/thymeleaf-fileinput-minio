@@ -39,28 +39,9 @@ mermaid_output_format = 'svg'  # Usar SVG para mejor calidad
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-def setup(app):
-    # Cargar Mermaid v11 desde CDN
-    app.add_js_file('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs', type='module')
-    
-    # Inicialización de Mermaid
-    app.add_js_file(None, 
-                   body="""
-                   document.addEventListener('DOMContentLoaded', function() {
-                       if (typeof mermaid !== 'undefined') {
-                           mermaid.initialize({
-                               startOnLoad: true,
-                               theme: 'default',
-                               securityLevel: 'loose',
-                               fontFamily: 'Arial, sans-serif'
-                           });
-                       }
-                   });
-                   """,
-                   priority=200)
-
 # Configuración de archivos estáticos
 html_static_path = ['_static']
+html_css_files = ['css/custom.css']
 
 # Configuración del tema
 html_theme = 'sphinx_rtd_theme'
@@ -72,10 +53,6 @@ html_theme_options = {
     'titles_only': False
 }
 
-# Configuración para archivos estáticos
-html_static_path = ['_static']
-html_css_files = ['css/custom.css']
-
 # Evitar problemas de caché añadiendo un timestamp a los archivos estáticos
 import time
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
@@ -84,10 +61,10 @@ html_context = {
 }
 
 def setup(app):
-    # Cargar Mermaid
-    app.add_js_file(f'https://cdn.jsdelivr.net/npm/mermaid@{mermaid_version}/dist/mermaid.min.js')
+    # Cargar Mermaid v11 desde CDN
+    app.add_js_file('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs', type='module')
     
-    # Inicialización básica de Mermaid
+    # Inicialización de Mermaid
     app.add_js_file(None, 
                    body="""
                    document.addEventListener('DOMContentLoaded', function() {
