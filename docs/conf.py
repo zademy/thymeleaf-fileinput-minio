@@ -47,7 +47,8 @@ translations = [
     # Añade más idiomas según sea necesario
 ]
 
-# Configuración de metadatos para cada idiomall_ = {}
+# Configuración de metadatos para cada idioma
+all_ = {}
 for code, name in translations:
     if code == 'es':
         all_[code] = {
@@ -155,13 +156,9 @@ html_favicon = '_static/favicon.ico'  # Añade un favicon si lo tienes
 # Evitar problemas de caché añadiendo un timestamp a los archivos estáticos
 import time
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S'
-html_context = {
-    'build_id': str(int(time.time())),
-}
 
 # Configuración de Mermaid
 mermaid_version = '11.2.0'  # Última versión estable
-
 
 # -- Options for autodoc -----------------------------------------------------
 # Mock dependencies that might not be available during documentation build
@@ -178,41 +175,34 @@ autodoc_mock_imports = [
 html_show_sourcelink = False
 html_show_sphinx = False
 
-# Configuración para múltiples idiomas en ReadTheDocs
-html_context = {
-    'display_github': True,  # Integración con GitHub
-    'github_user': 'zademy',  # Tu usuario/organización de GitHub
-    'github_repo': 'thymeleaf-fileinput-minio',  # Nombre del repositorio
-    'github_version': 'main',  # Rama por defecto
-    'conf_py_path': '/docs/',  # Ruta a la documentación
-    'languages': translations,  # Lista de idiomas disponibles
-    'current_language': language,  # Idioma actual
-    'current_version': release,  # Versión actual
-    'version': release,  # Compatibilidad con versiones antiguas
-    'language': language,  # Compatibilidad con versiones antiguas
-    'languages_dict': {code: name for code, name in translations},  # Diccionario de idiomas
-    'translations': translations,  # Lista de idiomas
-    'default_lang': 'es',  # Idioma por defecto
-    'LANGUAGES': translations,  # Compatibilidad con algunos temas
-}
-
 # -- Status Badges Configuration --------------------------------------------
 # These variables are used to generate the status badges in the documentation
-# You can customize the branch name if needed
 rtd_version = 'latest'  # or 'stable' for the stable version
 rtd_project = 'thymeleaf-fileinput-minio'  # Your ReadTheDocs project name
 rtd_language = 'es'  # The language of your documentation
 
-# Add the status badges to the HTML context
+# Configuración unificada para html_context
 html_context = {
-    'build_id': str(int(time.time())),
-    'display_github': True,  # Enable 'Edit on GitHub' link
-    'github_user': 'zademy',  # Your GitHub username/organization
-    'github_repo': 'thymeleaf-fileinput-minio',  # Your repository name
-    'github_version': 'main',  # Your default branch
-    'conf_py_path': '/docs/',  # Path from the root of the project to the docs
+    # Información de GitHub
+    'display_github': True,
+    'github_user': 'zademy',
+    'github_repo': 'thymeleaf-fileinput-minio',
+    'github_version': 'main',
+    'conf_py_path': '/docs/',
     
-    # ReadTheDocs specific variables for badges
+    # Configuración de internacionalización
+    'languages': translations,
+    'current_language': language,
+    'current_version': release,
+    'version': release,
+    'language': language,
+    'languages_dict': {code: name for code, name in translations},
+    'translations': translations,
+    'default_lang': 'es',
+    'LANGUAGES': translations,
+    
+    # ReadTheDocs specific variables
+    'build_id': str(int(time.time())),
     'rtd_version': rtd_version,
     'rtd_project': rtd_project,
     'rtd_url': f'https://{rtd_project}.readthedocs.io/{rtd_language}/{rtd_version}'
