@@ -6,6 +6,14 @@
 Bienvenido a la documentación de Thymeleaf FileInput con MinIO
 ==============================================================
 
+.. include:: _templates/menu.rst
+
+Contenido Principal
+===================
+
+Bienvenido a la documentación del proyecto Thymeleaf FileInput con MinIO.
+Esta herramienta permite la carga de archivos mediante Thymeleaf con almacenamiento en MinIO.
+
 .. toctree::
    :maxdepth: 2
    :caption: Guía de Inicio Rápido

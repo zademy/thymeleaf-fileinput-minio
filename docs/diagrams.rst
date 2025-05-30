@@ -1,9 +1,11 @@
-.. _diagrams:
+.. include:: _templates/menu.rst
 
 Diagramas del Proyecto
 =====================
 
 Esta sección contiene los diagramas de arquitectura y flujo del proyecto Thymeleaf FileInput con MinIO, generados con Mermaid.
+
+.. _arquitectura:
 
 Arquitectura General
 -------------------
@@ -27,6 +29,8 @@ Arquitectura General
        style D fill:#fbb,stroke:#333,stroke-width:2px
 
    Diagrama general de la arquitectura del sistema
+
+.. _flujo-subida:
 
 Flujo de Subida de Archivos
 -------------------------

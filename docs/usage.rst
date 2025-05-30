@@ -2,6 +2,8 @@
 Guía de Uso
 ==================
 
+.. include:: _templates/menu.rst
+
 Esta guía explica cómo utilizar la aplicación Thymeleaf FileInput con MinIO.
 
 Subida de Archivos
