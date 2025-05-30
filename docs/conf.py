@@ -26,6 +26,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
+    'readthedocs_sphinx_search',  # Extensión para mejorar la búsqueda en ReadTheDocs
 ]
 
 # Configuración del tema de Read the Docs
@@ -116,10 +117,6 @@ html_show_sphinx = False
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = True
 
-# Incluir solo los archivos JavaScript necesarios
+# No necesitamos archivos CSS o JavaScript personalizados
 html_css_files = []
-html_js_files = [
-    # Ya no cargamos jQuery aquí, lo cargamos en script-loader.js
-    # Solo cargamos nuestros scripts personalizados
-    'js/theme.js'
-]
+html_js_files = []
