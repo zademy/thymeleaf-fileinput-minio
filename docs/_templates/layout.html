@@ -1,6 +1,7 @@
 {% extends "!layout.html" %}
 {% block extrahead %}
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Cargar nuestro script-loader.js al principio -->
+  <script src="{{ pathto('_static/js/script-loader.js', 1) }}"></script>
   {{ super() }}
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' *.readthedocs.io *.readthedocs.org fonts.googleapis.com fonts.gstatic.com cdn.jsdelivr.net code.jquery.com">
   <meta http-equiv="Permissions-Policy" content="interest-cohort=(), attribution-reporting=()">
