@@ -32,7 +32,7 @@ language = 'es'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Añadir archivos JavaScript personalizados
+# Solo incluir el archivo JavaScript necesario para corregir SphinxRtdTheme
 html_js_files = ['js/sphinx_rtd_theme_fix.js']
 
 # -- Options for autodoc -----------------------------------------------------
