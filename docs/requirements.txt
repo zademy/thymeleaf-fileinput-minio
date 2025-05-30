@@ -1,17 +1,22 @@
 # Dependencias principales
-sphinx==7.3.7
-sphinx_rtd_theme==2.0.0
-sphinxcontrib-mermaid==1.0.0
-myst-parser==2.0.0
+sphinx>=7.0.0,<8.0.0
+sphinx_rtd_theme>=2.0.0
+sphinxcontrib-mermaid>=1.0.0
+myst-parser>=2.0.0
+
+# Dependencias para Mermaid v11
+sphinxcontrib-httpdomain>=1.8.0
+sphinxcontrib-jsmath>=1.0.1
+sphinxcontrib-htmlhelp>=2.0.0
 
 # Dependencias opcionales para mejoras
-sphinx-copybutton==0.5.2
-sphinxext-opengraph==0.8.2
+sphinx-copybutton>=0.5.2
+sphinxext-opengraph>=0.8.2
+sphinx-design>=0.5.0  # Para componentes de diseño modernos
 
-# Bloquear versiones de dependencias indirectas
-# para garantizar la compatibilidad
-Jinja2==3.1.2
-MarkupSafe==2.1.3
-Pygments==2.17.2
-docutils==0.20.1
-packaging==23.2
+# Dependencias de tiempo de ejecución
+Jinja2>=3.0.0,<4.0.0
+MarkupSafe>=2.1.0,<3.0.0
+Pygments>=2.17.2,<3.0.0
+docutils>=0.20.1,<0.22.0
+packaging>=23.2,<24.0.0
