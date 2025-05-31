@@ -136,15 +136,7 @@ mathjax3_config = {
 # Configuración de Mermaid
 mermaid_output_format = 'raw'  # Usa SVG/PNG para PDF, raw para HTML
 mermaid_d3_zoom = False  # Desactivar zoom por defecto
-mermaid_init_js = """
-    mermaid.initialize({
-        startOnLoad: true,
-        theme: 'default',
-        securityLevel: 'loose',
-        fontFamily: 'Arial, sans-serif',
-        logLevel: 'fatal'
-    });
-"""
+
 
 # Configuración del tema
 html_theme = 'sphinx_rtd_theme'
